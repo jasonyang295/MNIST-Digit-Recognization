@@ -29,3 +29,11 @@ model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metr
 model.fit(x_train, y_train, epochs = 3) #epochs specifies how many times the network trains / sees data
 
 
+#save our results so we can upload our own custom datasets
+accuracy, loss = model.evaluate(x_test, y_test)
+print(accuracy)
+print(loss)
+
+
+#saves results as a model file
+model.save('digits.model')
