@@ -24,6 +24,8 @@ model.add(tf.keras.layers.Dense(units = 128, activation = tf.nn.relu))
 #next line scales nums down with softmax function so they add up to 1 so we have actual percentages
 model.add(tf.keras.layers.Dense(units = 10, activation = tf.nn.softmax))
 
-
+#define optimization and loss function as well as 
+model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
+model.fit(x_train, y_train, epochs = 3) #epochs specifies how many times the network trains / sees data
 
 
