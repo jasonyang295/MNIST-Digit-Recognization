@@ -44,7 +44,7 @@ model.save('digits.model')
 
 
 for x in range(1, 7):
-    img = cv.imread(f'{x}.png')[:, :, 0] #read in images
+    img = cv.imread(f'{x}.png')[:,:,0] #read in images
     img = np.invert(np.array([img])) #decolor images, turn them into black on white with invert
     prediction = model.predict(img) #feed image into program
     print(f'The result is probably: {np.argmax(prediction)}') #get the result and display it
