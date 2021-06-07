@@ -30,7 +30,7 @@ model.fit(x_train, y_train, epochs = 3) #epochs specifies how many times the net
 
 
 #save our results so we can upload our own custom datasets
-accuracy, loss = model.evaluate(x_test, y_test)
+loss, accuracy = model.evaluate(x_test, y_test)
 print(accuracy)
 print(loss)
 
